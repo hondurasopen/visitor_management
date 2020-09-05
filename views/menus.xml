@@ -16,7 +16,7 @@
 		sequence="1" 
 		parent="visitor_management.parapharmacia_visitor_management_main"/>
 
-	<menuitem id="doff_operaciones_planificacion_semanal_menu_category" 
+	<menuitem id="parapharmacia_visitor_setting_main" 
 		name="Configuración" 
 		sequence="10" 
 		parent="visitor_management.parapharmacia_menu_root"/>

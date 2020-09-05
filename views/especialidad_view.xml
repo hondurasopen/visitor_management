@@ -38,7 +38,7 @@
 <menuitem id="parapharmacia_visitor_configuration_especilidad" 
 		name="Especialidad" 
 		sequence="1" 
-		parent="visitor_management.parapharmacia_visitor_management_main"
+		parent="visitor_management.parapharmacia_visitor_setting_main"
 		action="action_parapharma_doctor"/>
 	
 </odoo>
