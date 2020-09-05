@@ -12,8 +12,7 @@
         "views/menus.xml",
         "views/doctor_view.xml",
         "views/especialidad_view.xml",
-        #"views/planificacion_semanal.xml",
-        #"views/mrp_mp_view.xml",
+        "views/visit_view.xml",
         
         #"reports/report_planning.xml",
         #"reports/report_planning_view.xml",

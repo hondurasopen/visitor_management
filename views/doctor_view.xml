@@ -14,7 +14,6 @@
 				</group>					
 				<group>
 					<field name="hobby" />
-					<field name="description"/>
 					<field name="especialidad_id" options="{'no_create': True}"/>
 				</group>
 			</group>
@@ -22,10 +21,10 @@
 			<page string="Otros Datos">
 			<group>
 				<group>
-					<field name="addres" />
+					<field name="description" />
 				</group>					
 				<group>
-					<field name="comments" />
+					<field name="location" />
 				</group>
 			</group>
 			</page>
@@ -53,7 +52,7 @@
 	<field name="view_mode">tree,form</field>
 </record>
 
-<menuitem id="parapharmacia_visitor_management" 
+<menuitem id="parapharmacia_doctor_management" 
 		name="Doctores" 
 		sequence="1" 
 		parent="visitor_management.parapharmacia_visitor_management_main"

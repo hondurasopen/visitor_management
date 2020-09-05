@@ -14,8 +14,7 @@ class Doctor(models.Model):
     birthdate = fields.Date("Fecha de cumpleaños")
     hobby = fields.Char("Interes/hobby")
     description = fields.Char("Descripción de cliente")
-    comments = fields.Text("Observaciones")
-    addres = fields.Text("Dirección")
+    location = fields.Text("Dirección")
     especialidad_id = fields.Many2one("parapharma.especialidad", "Especialidad", required=True)
     competence_id = fields.Char("Afinidad Con Competencia")
  

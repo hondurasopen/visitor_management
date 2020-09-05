@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record id="parapharma_visita_form_view" model="ir.ui.view">
+	<field name="name">parapharma.visita.form.view</field>
+	<field name="model">parapharma.visita</field>
+	<field name="arch" type="xml">
+	<form string="Planificación semanal">
+		<sheet>
+		<separator style="color:#009C96;font-style:bold;" string="Información General"/>
+			<group>
+				<group>
+					<field name="doctor_id" />
+					<field name="especialidad_id" options="{'no_create': True}"/>
+				</group>					
+				<group>
+					<field name="date" />
+					<field name="competence_id" />
+				</group>
+			</group>
+		<notebook>
+			<page string="Otros Datos">
+			<group>
+				<group>
+					<field name="comments" />
+				</group>					
+				<group>
+					<field name="location" />
+				</group>
+			</group>
+			</page>
+		</notebook>
+		</sheet>
+		</form>
+	</field>
+</record>
+
+<record id="parapharma_visita_tree_view" model="ir.ui.view">
+	<field name="name">parapharma.visita.tree_view</field>
+	<field name="model">parapharma.visita</field>
+	<field name="arch" type="xml">
+		<tree>
+			<field name="doctor_id"/>
+			<field name="location"/>
+			<field name="date"/>
+		</tree>
+	</field>
+</record>
+
+<record id="action_parapharma_visita" model="ir.actions.act_window">
+	<field name="name">Visita Médica</field>
+	<field name="res_model">parapharma.visita</field>
+	<field name="view_mode">tree,form</field>
+</record>
+
+<menuitem id="parapharmacia_visit_management" 
+		name="Visita Médica" 
+		sequence="1" 
+		parent="visitor_management.parapharmacia_visitor_management_main"
+		action="action_parapharma_visita"/>
+	
+</odoo>
