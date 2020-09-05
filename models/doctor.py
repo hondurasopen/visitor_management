@@ -10,7 +10,7 @@ from datetime import date, datetime, timedelta
 class Doctor(models.Model):
     _name = "parapharma.doctor"
     
-    name = fields.Char("Nombre de doctor")
+    name = fields.Char("Nombre de doctor", required=True)
     birthdate = fields.Date("Fecha de cumpleaños")
     hobby = fields.Char("Interes/hobby")
     description = fields.Char("Descripción de cliente")
@@ -23,7 +23,7 @@ class Doctor(models.Model):
 class Profile(models.Model):
     _name = "parapharma.especialidad"
 
-    name = fields.Char("Especialidad")
+    name = fields.Char("Especialidad", required=True)
 
 
 
