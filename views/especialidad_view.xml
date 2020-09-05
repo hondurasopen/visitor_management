@@ -29,7 +29,7 @@
 	</field>
 </record>
 
-<record id="action_parapharma_doctor" model="ir.actions.act_window">
+<record id="action_parapharma_especialidad" model="ir.actions.act_window">
 	<field name="name">Especialidad</field>
 	<field name="res_model">parapharma.especialidad</field>
 	<field name="view_mode">tree,form</field>
