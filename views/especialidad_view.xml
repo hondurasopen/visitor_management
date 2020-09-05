@@ -39,6 +39,6 @@
 		name="Especialidad" 
 		sequence="1" 
 		parent="visitor_management.parapharmacia_visitor_setting_main"
-		action="action_parapharma_doctor"/>
+		action="action_parapharma_especialidad"/>
 	
 </odoo>
