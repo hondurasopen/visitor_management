@@ -18,8 +18,8 @@
         #"reports/report_planning_view.xml",
     ],
     'update_xml': [
-        #"security/groups.xml",   
-        #"security/ir.model.access.csv"
+        "security/groups.xml",   
+        "security/ir.model.access.csv"
      ],
     'application': True,
 }
