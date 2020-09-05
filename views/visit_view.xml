@@ -5,6 +5,9 @@
 	<field name="model">parapharma.visita</field>
 	<field name="arch" type="xml">
 	<form string="Planificación semanal">
+		<header>
+			<field name="state" widget="statusbar"/>
+		</header>
 		<sheet>
 		<separator style="color:#009C96;font-style:bold;" string="Visita Médica"/>
 			<group>

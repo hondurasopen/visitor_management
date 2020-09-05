@@ -18,6 +18,8 @@ class Doctor(models.Model):
     location = fields.Text("Ubicación", required=True)
     competence_id = fields.Char("Afinidad Con Competencia", required=True)
     user_id = fields.Many2one("res.users", "Visitador")
+    state = fields.Selection([('draft', 'Borrador'), ('cancelado', 'Cancelado'), ('finalizada', 'Finalizado')], 
+        "Estado", default='draft', track_visibility='onchange')
 
     @api.onchange("doctor_id")
     def onchangedoctor(self):
