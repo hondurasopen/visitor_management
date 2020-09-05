@@ -18,9 +18,9 @@ class Doctor(models.Model):
     addres = fields.Text("Dirección")
     especialidad_id = fields.Many2one("parapharma.especialidad", "Especialidad")
     competence_id = fields.Char("Afinidad Con Competencia")
+ 
 
-
- class Profile(models.Model):
+class Profile(models.Model):
     _name = "parapharma.especialidad"
 
     name = fields.Char("Especialidad")
