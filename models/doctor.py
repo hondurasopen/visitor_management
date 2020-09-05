@@ -17,11 +17,11 @@ class Doctor(models.Model):
     description = fields.Char("Descripción de cliente")
  	comments = fields.Text("Observaciones")
  	addres = fields.Text("Dirección")
- 	especialidad_id = fields.Many2one("parapharma.specialidad", "Especialidad")
+ 	especialidad_id = fields.Many2one("parapharma.especialidad", "Especialidad")
 
 
  class Profile(models.Model):
- 	_name = "parapharma.specialidad"
+ 	_name = "parapharma.especialidad"
 
  	name = fields.Char("Especialidad")
 
