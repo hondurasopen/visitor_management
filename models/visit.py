@@ -20,6 +20,13 @@ class Doctor(models.Model):
     user_id = fields.Many2one("res.users", "Visitador")
     state = fields.Selection([('draft', 'Borrador'), ('cancelado', 'Cancelado'), ('finalizada', 'Finalizado')], 
         "Estado", default='draft', track_visibility='onchange')
+    cumplimiento_objetivo = fields.Selection([('Si', 'Si'), ('No', 'No')], "Cumplimiento objetivo")
+    razones_cumplimiento = fields.Char("Razones cumplimiento")
+
+
+    @api.multi
+    def finalizar_visita(self):
+        self.write({'state': 'finalizada'})
 
     @api.onchange("doctor_id")
     def onchangedoctor(self):

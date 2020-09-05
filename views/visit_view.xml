@@ -6,6 +6,7 @@
 	<field name="arch" type="xml">
 	<form string="Planificación semanal">
 		<header>
+			<button name="finalizar_visita" type="object" string="Finzalizar"  class="oe_highlight" states="draft"/>    
 			<field name="state" widget="statusbar"/>
 		</header>
 		<sheet>
@@ -18,6 +19,7 @@
 				<group>
 					<field name="date" />
 					<field name="competence_id" />
+					<field name="location" />
 				</group>
 			</group>
 		<notebook>
@@ -28,7 +30,8 @@
 					<field name="comments" />
 				</group>					
 				<group>
-					<field name="location" />
+					<field name="cumplimiento_objetivo"/>
+					<field name="razones_cumplimiento" attrs="{'invisible': [('cumplimiento_objetivo','=', 'Si')]}"/>
 				</group>
 			</group>
 			</page>
