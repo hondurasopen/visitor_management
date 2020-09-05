@@ -12,11 +12,11 @@ class Doctor(models.Model):
     _rec_name = "doctor_id"
 
     date = fields.Date("Fecha de visita")
-    doctor_id = fields.Many2one("parapharma.doctor", "Médico")
-    especialidad_id = fields.Many2one("parapharma.especialidad", "Especialidad")
+    doctor_id = fields.Many2one("parapharma.doctor", "Médico", required=True)
+    especialidad_id = fields.Many2one("parapharma.especialidad", "Especialidad", required=True)
     comments = fields.Text("Observaciones")
-    location = fields.Text("Ubicación")
-    competence_id = fields.Char("Afinidad Con Competencia")
+    location = fields.Text("Ubicación", required=True)
+    competence_id = fields.Char("Afinidad Con Competencia", required=True)
 
     @api.onchange("doctor_id")
     def onchangedoctor(self):
