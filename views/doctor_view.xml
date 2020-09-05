@@ -52,5 +52,11 @@
 	<field name="res_model">parapharma.doctor</field>
 	<field name="view_mode">tree,form</field>
 </record>
+
+<menuitem id="parapharmacia_visitor_management" 
+		name="Doctores" 
+		sequence="1" 
+		parent="visitor_management.parapharmacia_visitor_management_main"
+		action="action_parapharma_doctor"/>
 	
 </odoo>
