@@ -11,16 +11,19 @@ class Doctor(models.Model):
     _name = "parapharma.visita"
     _rec_name = "doctor_id"
 
+    def get_visitador(self):
+        return self.env.user.id
+
     date = fields.Date("Fecha de visita")
     doctor_id = fields.Many2one("parapharma.doctor", "Médico", required=True)
     especialidad_id = fields.Many2one("parapharma.especialidad", "Especialidad", required=True)
     comments = fields.Text("Observaciones")
     location = fields.Text("Ubicación", required=True)
     competence_id = fields.Char("Afinidad Con Competencia", required=True)
-    user_id = fields.Many2one("res.users", "Visitador")
+    user_id = fields.Many2one("res.users", "Visitador", required=True, default=get_visitador)
     state = fields.Selection([('draft', 'Borrador'), ('cancelado', 'Cancelado'), ('finalizada', 'Finalizado')], 
-        "Estado", default='draft', track_visibility='onchange')
-    cumplimiento_objetivo = fields.Selection([('Si', 'Si'), ('No', 'No')], "Cumplimiento objetivo")
+        "Estado", default='draft', track_visibility='onchange', required=True)
+    cumplimiento_objetivo = fields.Selection([('Si', 'Si'), ('No', 'No')], "Cumplimiento objetivo", required=True)
     razones_cumplimiento = fields.Char("Razones cumplimiento")
 
 
