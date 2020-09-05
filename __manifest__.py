@@ -11,6 +11,7 @@
     'data': [
         "views/menus.xml",
         "views/doctor_view.xml",
+        "views/especialidad_view.xml",
         #"views/planificacion_semanal.xml",
         #"views/mrp_mp_view.xml",
         

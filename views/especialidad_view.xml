@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record id="parapharma_especialidad_form_view" model="ir.ui.view">
+	<field name="name">parapharma.especialidadform.view</field>
+	<field name="model">parapharma.especialidad</field>
+	<field name="arch" type="xml">
+	<form string="Planificación semanal">
+		<sheet>
+		<separator style="color:#009C96;font-style:bold;" string="Información General"/>
+			<group>
+				<group>
+					<field name="name" />
+				</group>					
+				<group>
+				</group>
+			</group>
+		</sheet>
+		</form>
+	</field>
+</record>
+
+<record id="parapharma_especialidad_tree_view" model="ir.ui.view">
+	<field name="name">parapharma.especialidad.tree_view</field>
+	<field name="model">parapharma.especialidad</field>
+	<field name="arch" type="xml">
+		<tree>
+			<field name="name"/>
+		</tree>
+	</field>
+</record>
+
+<record id="action_parapharma_doctor" model="ir.actions.act_window">
+	<field name="name">Especialidad</field>
+	<field name="res_model">parapharma.especialidad</field>
+	<field name="view_mode">tree,form</field>
+</record>
+
+<menuitem id="parapharmacia_visitor_configuration_especilidad" 
+		name="Especialidad" 
+		sequence="1" 
+		parent="visitor_management.parapharmacia_visitor_management_main"
+		action="action_parapharma_doctor"/>
+	
+</odoo>

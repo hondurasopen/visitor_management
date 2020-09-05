@@ -48,7 +48,7 @@
 </record>
 
 <record id="action_parapharma_doctor" model="ir.actions.act_window">
-	<field name="name">Datos Doctor</field>
+	<field name="name">Doctores</field>
 	<field name="res_model">parapharma.doctor</field>
 	<field name="view_mode">tree,form</field>
 </record>
