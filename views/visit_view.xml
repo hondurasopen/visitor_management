@@ -9,7 +9,7 @@
 		<separator style="color:#009C96;font-style:bold;" string="Visita Médica"/>
 			<group>
 				<group>
-					<field name="doctor_id" />
+					<field name="doctor_id" options="{'no_create': True}"/>
 					<field name="especialidad_id" options="{'no_create': True}"/>
 				</group>					
 				<group>
@@ -21,6 +21,7 @@
 			<page string="Otros Datos">
 			<group>
 				<group>
+					<field name="user_id" options="{'no_create': True}"/>
 					<field name="comments" />
 				</group>					
 				<group>

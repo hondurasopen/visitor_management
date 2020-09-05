@@ -17,6 +17,7 @@ class Doctor(models.Model):
     comments = fields.Text("Observaciones")
     location = fields.Text("Ubicación", required=True)
     competence_id = fields.Char("Afinidad Con Competencia", required=True)
+    user_id = fields.Many2one("res.users", "Visitador")
 
     @api.onchange("doctor_id")
     def onchangedoctor(self):
