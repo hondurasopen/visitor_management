@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+<record id="parapharma_doctor_form_view" model="ir.ui.view">
+	<field name="name">parapharma.doctor.form.view</field>
+	<field name="model">parapharma.doctor</field>
+	<field name="arch" type="xml">
+	<form string="Planificación semanal">
+		<sheet>
+		<separator style="color:#009C96;font-style:bold;" string="Información General"/>
+			<group>
+				<group>
+					<field name="name" />
+					<field name="birthdate" />
+				</group>					
+				<group>
+					<field name="hobby" />
+					<field name="description"/>
+					<field name="especialidad_id" options="{'no_create': True}"/>
+				</group>
+			</group>
+		<notebook>
+			<page string="Otros Datos">
+			<group>
+				<group>
+					<field name="addres" />
+				</group>					
+				<group>
+					<field name="comments" />
+				</group>
+			</group>
+			</page>
+		</notebook>
+		</sheet>
+		</form>
+	</field>
+</record>
+
+<record id="parapharma_doctor_tree_view" model="ir.ui.view">
+	<field name="name">parapharma.doctor.tree_view</field>
+	<field name="model">parapharma.doctor</field>
+	<field name="arch" type="xml">
+		<tree>
+			<field name="name"/>
+			<field name="fecha_inicial"/>
+			<field name="fecha_final"/>
+			<field name="state"/>
+		</tree>
+	</field>
+</record>
+
+<record id="action_parapharma_doctor" model="ir.actions.act_window">
+	<field name="name">Datos Doctor</field>
+	<field name="res_model">parapharma.doctor</field>
+	<field name="view_mode">tree,form</field>
+</record>
+	
+</odoo>

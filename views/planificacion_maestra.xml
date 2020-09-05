@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  
+  <record id="doff_operaciones_planificacion_maestra_form_view" model="ir.ui.view">
+    <field name="name">doff_operaciones_planificacion_maestra_form_view</field>
+    <field name="model">doff.operaciones.planificacion.maestra</field>
+        <field name="arch" type="xml">
+          <form string="Planificación maestra">
+            <header>
+              <button name="set_validar" 
+                type="object" 
+                attrs="{'invisible':[('state','=','done')]}" 
+                string="Validar" 
+                groups="" 
+                class="oe_highlight"/>
+
+
+              <field name="state" widget="statusbar"/>
+            </header>
+            <sheet>
+              <div >
+                <h2>Planificación maestra</h2>
+              </div>
+              <group>
+                <group>
+                  <field name="name"
+                    required="1"
+                    attrs="{'readonly':[('state','=','done')]}"/>
+
+                  <field name="encargado"
+                    readonly="1"/>
+
+                  <field name="week_year_inicio"
+                    invisible="1"/>
+                  
+                  <field name="week_year_final"
+                    invisible="1"/> 
+
+                  <field name="plan_semana1"
+                    readonly="1"
+                    attrs="{'invisible':['|',('semana1','=',False),('state','=','draft')]}"/>
+
+                  <field name="plan_semana3"
+                    readonly="1"
+                    attrs="{'invisible':['|',('semana3','=',False),('state','=','draft')]}"/>
+
+                  <field name="plan_semana5"
+                    readonly="1"
+                    attrs="{'invisible':['|',('semana5','=',False),('state','=','draft')]}"/> 
+
+                </group>
+                <group>
+                  <field name="fecha_final"
+                    required="1"
+                    attrs="{'readonly':[('state','=','done')]}"/>
+
+                  <field name="cantidad_semanas"
+                    attrs="{'invisible':['|',('fecha_final','=',False)]}"
+                    readonly="1"
+                    force_save="1"/>
+
+
+                  <field name="semana1"
+                    invisible="1"/>
+                  
+                  <field name="semana2"
+                    invisible="1"/>
+                  
+                  <field name="semana3"
+                    invisible="1"/>
+
+                  <field name="semana4"
+                    invisible="1"/>
+
+                  <field name="semana5"
+                    invisible="1"/>
+
+                  <field name="plan_semana2"
+                    readonly="1"
+                    attrs="{'invisible':['|',('semana2','=',False),('state','=','draft')]}"/>
+
+                  <field name="plan_semana4"
+                    readonly="1"
+                    attrs="{'invisible':['|',('semana4','=',False),('state','=','draft')]}"/>
+
+                </group>
+              </group>
+              <notebook>
+                <page string="Planificación">
+                  <field name="doff_operaciones_planificacion_maestra_detail_ids"
+                    attrs="{'readonly':[('state','=','done')]}">
+                    
+                    <tree editable="bottom">
+                      <field name="product_id"
+                        domain="[('producto_desnudo','=',True)]"
+                        options="{'no_create':True,'no_open':True}"/>
+
+                      <field name="vitola"
+                        readonly="1"
+                        force_save="1"/>
+
+                      <field name="prom_production"
+                        readonly="1"
+                        force_save="1"/>
+
+                      <field name="semana_1"
+                        attrs="{'invisible':[('parent.semana1','=',False)],
+                                'required':[('parent.semana1','=',True)]}"/>
+                      
+                      <field name="semana_2"
+                        attrs="{'invisible':[('parent.semana2','=',False)],
+                                'required':[('parent.semana2','=',True)]}"/>
+
+                      <field name="semana_3"
+                        attrs="{'invisible':[('parent.semana3','=',False)],
+                                'required':[('parent.semana3','=',True)]}"/>
+                      
+                      <field name="semana_4"
+                        attrs="{'invisible':[('parent.semana4','=',False)],
+                                'required':[('parent.semana4','=',True)]}"/>
+                     
+                      <field name="semana_5"
+                        attrs="{'invisible':[('parent.semana5','=',False)],
+                                'required':[('parent.semana1','=',True)]}"/>
+                    </tree>
+                  </field>
+                </page>
+              </notebook>
+            </sheet>
+            <div class="oe_chatter">                             
+              <field name="message_ids" widget="mail_thread"/>
+            </div>
+          </form>
+        </field>
+  </record>
+   
+  <record id="doff_operaciones_planificacion_maestra_tree_view" model="ir.ui.view">
+      <field name="name">doff_operaciones_planificacion_maestra_tree_view</field>
+      <field name="model">doff.operaciones.planificacion.maestra</field>
+      <field name="arch" type="xml">
+          <tree>
+            <field name="name"/>
+            <field name="fecha_final"/>
+            <field name="encargado"/>
+            <field name="state"/>
+          </tree>
+        </field>      
+  </record>
+
+  <record id="doff_operaciones_planificacion_maestra_menu_action" model="ir.actions.act_window">
+        <field name="name">Planificación maestra</field>
+        <field name="res_model">doff.operaciones.planificacion.maestra</field>
+        <field name="view_mode">tree,form</field>
+  </record>
+
+</odoo>

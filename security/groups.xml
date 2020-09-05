@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+	<record model="ir.module.category" id="modulo_bi_operaciones">
+        <field name="name">BI operaciones</field>
+        <field name="description">BI operaciones</field>
+        <field name="sequence">4</field>
+	</record>
+	
+
+    <record id="group_bi_operaciones_manager" model="res.groups">
+        <field name="category_id" ref="modulo_bi_operaciones"/>
+        <field name="name">BI Operaciones (Manager)</field>
+    </record>
+
+    <record id="group_bi_operaciones_user" model="res.groups">
+        <field name="category_id" ref="modulo_bi_operaciones"/>
+        <field name="name">BI Operaciones (User)</field>
+    </record>
+
+    <record id="group_bi_operaciones_obtener_prd" model="res.groups">
+        <field name="category_id" ref="modulo_bi_operaciones"/>
+        <field name="name">BI Obtener Producción</field>
+    </record>
+
+
+
+</data>
+</odoo>

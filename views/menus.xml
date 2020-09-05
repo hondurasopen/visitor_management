@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+	<menuitem id="parapharmacia_menu_root" 
+		name="Visitadores" 
+		sequence="1" 
+		web_icon="visitor_management,static/description/icon.png"/>
+
+	<menuitem id="parapharmacia_visitor_management_main" 
+		name="Gestióm de Visitadores" 
+		sequence="1" 
+		parent="visitor_management.parapharmacia_menu_root"/>
+
+	<menuitem id="parapharmacia_visitor_management" 
+		name="Doctores" 
+		sequence="1" 
+		parent="visitor_management.parapharmacia_visitor_management_main"/>
+
+	<menuitem id="doff_operaciones_planificacion_semanal_menu_category" 
+		name="Configuración" 
+		sequence="10" 
+		parent="visitor_management.parapharmacia_menu_root"/>
+
+</odoo>
