@@ -10,12 +10,12 @@
 	
 
     <record id="group_visitador_manager" model="res.groups">
-        <field name="category_id" ref="modulo_bi_operaciones"/>
+        <field name="category_id" ref="module_visit_management"/>
         <field name="name">Permisos Visitador (Manager)</field>
     </record>
 
     <record id="group_visitador_user" model="res.groups">
-        <field name="category_id" ref="modulo_bi_operaciones"/>
+        <field name="category_id" ref="module_visit_management"/>
         <field name="name">Permisos Visitador (Restringido)</field>
     </record>
 
