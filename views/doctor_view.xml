@@ -52,7 +52,7 @@
 	<field name="view_mode">tree,form</field>
 </record>
 
-<menuitem id="parapharmacia_doctor_management" 
+<menuitem id="parapharmacia_doctor_menu" 
 		name="Doctores" 
 		sequence="1" 
 		parent="visitor_management.parapharmacia_visitor_management_main"

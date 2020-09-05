@@ -11,11 +11,6 @@
 		sequence="1" 
 		parent="visitor_management.parapharmacia_menu_root"/>
 
-	<menuitem id="parapharmacia_visitor_management" 
-		name="Doctores" 
-		sequence="1" 
-		parent="visitor_management.parapharmacia_visitor_management_main"/>
-
 	<menuitem id="parapharmacia_visitor_setting_main" 
 		name="Configuración" 
 		sequence="10" 

@@ -6,7 +6,7 @@
 	<field name="arch" type="xml">
 	<form string="Planificación semanal">
 		<sheet>
-		<separator style="color:#009C96;font-style:bold;" string="Información General"/>
+		<separator style="color:#009C96;font-style:bold;" string="Visita Médica"/>
 			<group>
 				<group>
 					<field name="doctor_id" />
